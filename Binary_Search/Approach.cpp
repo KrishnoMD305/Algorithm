@@ -5,7 +5,7 @@
       If target = middle then return middle
    3. Repeat this untill a valid answer is found or else return -1.  */
 
-
+// Time Complexity: O (log n) 
 
 int start = 0;
 int end = arr.size() -1 ;
