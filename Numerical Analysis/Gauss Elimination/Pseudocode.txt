@@ -1,0 +1,30 @@
+Algorithm: Gauss Elimination
+
+1. Start
+2. Read n
+3. Read the coefficient matrix A and constant matrix B
+4. Form the augmented matrix [A | B]
+
+5. Forward Elimination:
+   For k = 0 to n-2
+       For i = k+1 to n-1
+           m = A[i][k] / A[k][k]
+           For j = k to n-1
+               A[i][j] = A[i][j] - m * A[k][j]
+           End For
+           B[i] = B[i] - m * B[k]
+       End For
+   End For
+
+6. Back Substitution:
+   x[n-1] = B[n-1] / A[n-1][n-1]
+   For i = n-2 down to 0
+       sum = 0
+       For j = i+1 to n-1
+           sum = sum + A[i][j] * x[j]
+       End For
+       x[i] = (B[i] - sum) / A[i][i]
+   End For
+
+7. Display x[0], x[1], ..., x[n-1]
+8. Stop
