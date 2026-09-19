@@ -1,0 +1,23 @@
+Algorithm: Gauss-Jordan Elimination
+
+1. Start
+2. Read n
+3. Read the coefficient matrix A and constant matrix B
+4. Form the augmented matrix [A | B]
+
+5. For k = 0 to n-1
+      a. Check whether A[k][k] = 0
+         If yes, interchange row k with a suitable lower row.
+      b. Divide row k by A[k][k]
+         Rk → Rk / A[k][k]
+      c. For i = 0 to n-1
+            If i ≠ k then
+                factor = A[i][k]
+                Ri → Ri - factor × Rk
+            End If
+         End For
+   End For
+
+6. Read the solution from the last column
+7. Display x[0], x[1], ..., x[n-1]
+8. Stop
